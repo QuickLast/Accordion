@@ -1,0 +1,129 @@
+*  {
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.blue-container {
+    background-color: rgb(100, 100, 255);
+    width: 100%;
+    height: 100px;
+}
+
+ul, li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #333;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.menus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    padding: 0 96px;
+}
+
+.titlecontainer {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 16px;
+    
+}
+
+.titlecontainer.show {
+    background-color: rgb(230, 230, 230);
+    animation: fadeInTitle 0.3s ease-in-out;
+}
+
+@keyframes fadeInTitle {
+    from {
+        opacity: 0.75;
+        transform: translateY(-20);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu {
+    width: 100%;
+    height: auto;
+    border: 2px;
+}
+
+.menu-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-top: solid 1px rgb(180, 180, 180);
+}
+
+.menu-title p {
+    color: #333;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.menu-title .button {
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.accordion {
+    display: none;
+}
+
+.accordion li{
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+.accordion.show {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    animation: fadeIn 0.3s ease-in-out;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    gap: 10px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.titlecontainer .minus {
+    display: none;
+}
